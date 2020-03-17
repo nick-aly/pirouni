@@ -1,0 +1,36 @@
+{
+    /* WORKBENCH */
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "vscode-icons",
+    "oneDarkPro.vivid": true,
+  
+    /* TERMINAL */
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.rendererType": "dom",
+  
+    /* WINDOW */
+    "window.title": "${rootPath}${separator}${appName}",
+  
+    /* EDITOR */
+    "editor.trimAutoWhitespace": true,
+    "editor.lineNumbers": "on",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true, 
+  
+    /* JAVASCRIPT */
+    "javascript.updateImportsOnFileMove.enabled": "always",
+  
+    /* TYPERSCRIPT  */
+    "typescript.updateImportsOnFileMove.enabled": "always",
+  
+    /* PRETTIER */
+  
+  
+    /* GIT */
+    "git.enabled": true,
+    "git.autofetch": false
+  }
