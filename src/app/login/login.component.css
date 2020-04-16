@@ -1,6 +1,8 @@
-.container {
-  height: 100%;
+a[ng-reflect-router-link] {
+  color: #617d8b;
+  font-weight: 700;
 }
-mat-form-field {
-  line-height: 1;
+
+tr[ng-reflect-router-link] {
+  cursor: pointer;
 }

@@ -1,8 +1,15 @@
 {
   /* WORKBENCH */
-  "workbench.colorTheme": "One Dark Pro",
+
+  /* One Dark Pro + VScode icons
+   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "vscode-icons",
   "oneDarkPro.vivid": true,
+*/
+  /* Winter is Coming + Material icons */
+  "workbench.colorTheme": "Winter is Coming (Dark Blue)",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {},
 
   /* TERMINAL */
   "terminal.integrated.fontFamily": "monospace",
@@ -13,10 +20,11 @@
 
   /* EDITOR */
   "editor.trimAutoWhitespace": true,
+  "editor.cursorBlinking": "smooth",
   "editor.lineNumbers": "on",
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "'Dank Mono', 'Operator Mono', 'Fira Code'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "editor.minimap.enabled": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,

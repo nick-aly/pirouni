@@ -1,1 +1,23 @@
-<p>profile works</p>
+<div fxLayout="column">
+  <div>
+    <img src="https://via.placeholder.com/150px" />
+  </div>
+  <div>sisi</div>
+  <div>
+    <div *ngFor="let recipe of userRecipes$ | async">
+      <mat-card>
+        <mat-card-title>{{ recipe.title }}</mat-card-title>
+        <img
+          mat-card-image
+          src="{{ recipe.photoURL }}"
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>{{ recipe.description }}</mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button></mat-card-actions
+        >
+      </mat-card>
+    </div>
+  </div>
+</div>

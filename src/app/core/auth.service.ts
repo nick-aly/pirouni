@@ -1,15 +1,15 @@
-import { Injectable, NgZone } from "@angular/core";
-import { User } from "../user";
-import { AngularFireAuth } from "@angular/fire/auth";
+import { Injectable, NgZone } from '@angular/core';
+import { User } from '../user';
+import { AngularFireAuth } from '@angular/fire/auth';
 import {
   AngularFirestore,
   AngularFirestoreDocument,
-} from "@angular/fire/firestore";
-import "firebase/firestore";
+} from '@angular/fire/firestore';
+import 'firebase/firestore';
 
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class AuthService {
   userData: any; // Save logged in user data
@@ -25,11 +25,11 @@ export class AuthService {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
-        localStorage.setItem("user", JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem("user"));
+        localStorage.setItem('user', JSON.stringify(this.userData));
+        JSON.parse(localStorage.getItem('user'));
       } else {
-        localStorage.setItem("user", null);
-        JSON.parse(localStorage.getItem("user"));
+        localStorage.setItem('user', null);
+        JSON.parse(localStorage.getItem('user'));
       }
     });
   }
@@ -40,7 +40,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
         console.log(result.user);
-        this.router.navigate(["home"]);
+        this.router.navigate(['home']);
         this.SetUserData(result.user);
       })
       .catch((error) => {
@@ -54,7 +54,7 @@ export class AuthService {
     return this.afAuth
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
-        this.router.navigate(["home"]);
+        this.router.navigate(['home']);
         this.SetUserData(result.user);
       })
       .catch((error) => {
@@ -64,7 +64,7 @@ export class AuthService {
   test() {}
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem('user'));
     return user !== null ? true : false;
   }
 
@@ -89,8 +89,8 @@ export class AuthService {
   // Sign out
   SignOut() {
     return this.afAuth.signOut().then(() => {
-      localStorage.removeItem("user");
-      this.router.navigate(["login"]);
+      localStorage.removeItem('user');
+      this.router.navigate(['login']);
     });
   }
 }
